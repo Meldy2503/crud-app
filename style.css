@@ -38,6 +38,7 @@ main {
   background-color: rgb(226, 221, 221, 0.2);
   padding: 2.5rem;
   border: 0.3rem solid #fff;
+  border-radius: 1rem;
   -ms-overflow-style: none !important;
   scrollbar-width: none !important;
 }
@@ -65,10 +66,10 @@ h1 {
   letter-spacing: 0.2rem;
 }
 
-h3 {
+/* h3 {
   margin-bottom: 1rem;
   font-size: 2.2rem;
-}
+} */
 
 h4 {
   font-size: 2.2rem;
@@ -172,6 +173,18 @@ input::placeholder {
 .go-to-top a {
   color: #333;
   scroll-behavior: smooth;
+}
+
+.add {
+  background-color: #010e29;
+  border: none;
+  padding-left:1rem;
+  padding-right: 1rem;
+}
+.close {
+  background-color:  #c20606;
+  border: none;
+  
 }
 
 @media only screen and (max-width: 1200px) {
