@@ -178,14 +178,33 @@ input::placeholder {
 .add {
   background-color: #010e29;
   border: none;
-  padding-left:1rem;
-  padding-right: 1rem;
+  padding:1rem 2.5rem;
+  font-size: 1.5rem;
 }
 .close {
   background-color:  #c20606;
   border: none;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
   
 }
+.form-control {
+  padding: 1.3rem;
+  font-size: 1.4rem;
+  overflow: auto;
+}
+
+.label {
+  text-align: left;
+}
+
+.modal-title {
+  font-size: 2rem;
+  color: #010e29;
+  font-weight: 500;
+
+}
+
 
 @media only screen and (max-width: 1200px) {
   .list {

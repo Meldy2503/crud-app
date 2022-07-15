@@ -59,9 +59,6 @@
         </div>
       </section>
 
-      <!-- Button trigger modal
-      <button type="button" class="btn btn-primary">Launch demo modal</button> -->
-
       <!-- Modal -->
       <form
         class="modal fade"
@@ -84,10 +81,23 @@
               ></button>
             </div>
             <div class="modal-body">
-              <input type="text" name="" id="" class="form" />
-              <input type="tel" name="" id="" />
-              <input type="email" name="" id="" />
-              <input type="date" name="" id="" />
+              <p class="label">Enter Full Name</p>
+              <input type="text" name="" id="textInput" class="form-control" />
+              <br />
+              <p class="label">Phone number</p>
+              <input class="form-control" type="tel" name="" id="numberInput" />
+              <br />
+              <p class="label">Email</p>
+              <input
+                class="form-control"
+                type="email"
+                name=""
+                id="emailInput"
+              />
+              <br />
+              <p class="label">Select Employment Date</p>
+              <input class="form-control" type="date" name="" id="dateInput" />
+              <br />
             </div>
             <div class="modal-footer">
               <button
@@ -97,7 +107,7 @@
               >
                 Close
               </button>
-              <button type="button" class="btn btn-primary add">Add</button>
+              <button type="submit" class="btn btn-primary add">Add</button>
             </div>
           </div>
         </div>
