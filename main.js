@@ -1,12 +1,5 @@
 // button click submit
 let form = document.getElementById("form");
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  formValidation();
-});
-
-// form validation -> success and failure states
 let textInput = document.getElementById("textInput");
 let phoneInput = document.getElementById("phoneInput");
 let emailInput = document.getElementById("emailInput");
@@ -15,7 +8,16 @@ let msgName = document.querySelector(".errName");
 let msgNo = document.querySelector(".errNo");
 let msgE = document.querySelector(".errEmail");
 let msgD = document.querySelector(".errDate");
+let employee = document.querySelector(".list-container");
+let closeOnClick = document.querySelector("#closeOnClick");
 
+// add event listener to form
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  formValidation();
+});
+
+// form validation -> success and failure states
 let formValidation = () => {
   if (textInput.value === "") {
     msgName.innerHTML = "Enter employee's name";
@@ -32,6 +34,12 @@ let formValidation = () => {
     msgE.innerHTML = "";
     msgD.innerHTML = "";
     acceptData();
+    // to close to add button on click-> line 38-42
+    closeOnClick.setAttribute("data-bs-dismiss", "modal");
+    closeOnClick.click();
+    (() => {
+      closeOnClick.setAttribute("data-bs-dismiss", "");
+    })();
   }
 };
 
@@ -45,8 +53,7 @@ let acceptData = () => {
   addEmployee();
 };
 
-// add employee
-let employee = document.querySelector(".list-container");
+// add employee and display on screen
 let addEmployee = () => {
   employee.innerHTML += `
   <div class="list">
@@ -62,4 +69,13 @@ let addEmployee = () => {
   </div>
 </div>
   `;
+  resetForm();
+};
+
+// reset form after adding new employee
+let resetForm = () => {
+  textInput.value = "";
+  phoneInput.value = "";
+  emailInput.value = "";
+  dateInput.value = "";
 };
