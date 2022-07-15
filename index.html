@@ -37,7 +37,7 @@
 
     <title>CRUD-APP</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
   </head>
   <body>
     <div class="go-to-top">
@@ -81,23 +81,53 @@
               ></button>
             </div>
             <div class="modal-body">
-              <p class="label">Enter Full Name</p>
-              <input type="text" name="" id="textInput" class="form-control" />
-              <br />
-              <p class="label">Phone number</p>
-              <input class="form-control" type="tel" name="" id="numberInput" />
-              <br />
-              <p class="label">Email</p>
-              <input
-                class="form-control"
-                type="email"
-                name=""
-                id="emailInput"
-              />
-              <br />
-              <p class="label">Select Employment Date</p>
-              <input class="form-control" type="date" name="" id="dateInput" />
-              <br />
+              <div>
+                <p class="label">Enter Full Name</p>
+                <input
+                  type="text"
+                  name=""
+                  id="textInput"
+                  class="form-control"
+                />
+                <p class="errName"></p>
+                <br />
+              </div>
+
+              <div>
+                <p class="label">Phone number</p>
+                <input
+                  class="form-control"
+                  type="tel"
+                  name=""
+                  id="phoneInput"
+                />
+                <p class="errNo"></p>
+                <br />
+              </div>
+
+              <div>
+                <p class="label">Email</p>
+                <input
+                  class="form-control"
+                  type="email"
+                  name=""
+                  id="emailInput"
+                />
+                <p class="errEmail"></p>
+                <br />
+              </div>
+
+              <div>
+                <p class="label">Select Employment Date</p>
+                <input
+                  class="form-control"
+                  type="date"
+                  name=""
+                  id="dateInput"
+                />
+                <p class="errDate"></p>
+                <br />
+              </div>
             </div>
             <div class="modal-footer">
               <button
@@ -196,5 +226,6 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script src="main.js"></script>
   </body>
 </html>
