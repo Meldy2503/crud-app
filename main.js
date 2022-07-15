@@ -31,5 +31,35 @@ let formValidation = () => {
     msgNo.innerHTML = "";
     msgE.innerHTML = "";
     msgD.innerHTML = "";
+    acceptData();
   }
+};
+
+// to accept and store data
+let data = {};
+let acceptData = () => {
+  data["name"] = textInput.value;
+  data["phone"] = phoneInput.value;
+  data["email"] = emailInput.value;
+  data["date"] = dateInput.value;
+  addEmployee();
+};
+
+// add employee
+let employee = document.querySelector(".list-container");
+let addEmployee = () => {
+  employee.innerHTML += `
+  <div class="list">
+  <div>
+    <h4>${data.name}</h4>
+    <p>${data.phone}</p>
+    <p>${data.email}</p>
+    <p>Employed ${data.date}</p>
+  </div>
+  <div class="icons">
+    <span><i class="fa-solid fa-pen-to-square"></i></span>
+    <span><i class="fa-solid fa-trash-can"></i></span>
+  </div>
+</div>
+  `;
 };
