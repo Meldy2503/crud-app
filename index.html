@@ -4,50 +4,122 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./assests/fontawesome-free-6.1.1-web/css/all.css"
+    />
+
     <title>CRUD-APP</title>
     <link rel="stylesheet" href="style.css" />
     <script src="main.js"></script>
   </head>
   <body>
+    <div class="go-to-top">
+      <a href="#header"><i class="fa fa-arrow-up"></i></a>
+    </div>
     <main>
-      <section>
-        <h2>DIGIMAIL LTD</h2>
-        <h3>Employee List</h3>
+      <section id="header">
         <div>
-          <input type="text" placeholder="Add New Employee" />
+          <h1>OCEANICA LTD</h1>
+          <h3>Employee's List</h3>
+          <div class="add-icon">
+            <input
+              type="text"
+              placeholder="Add New Employee"
+              class="add-employee"
+            />
+            <span><i class="fa-solid fa-user-plus"></i></span>
+          </div>
         </div>
       </section>
-      <section>
-        <div>
-          <h4>Edward mark</h4>
-          <p>emelder25@gmail.com</p>
-          <p>08037588098</p>
-          <p>Employed 25/03/2009</p>
+      <section id="employees">
+        <div class="list-container">
+          <div class="list">
+            <div>
+              <h4>Edward mark</h4>
+              <p>08037588098</p>
+              <p>emelder25@gmail.com</p>
+              <p>Employed 25/03/2009</p>
+            </div>
+            <div class="icons">
+              <span><i class="fa-solid fa-pen-to-square"></i></span>
+              <span><i class="fa-solid fa-trash-can"></i></span>
+            </div>
+          </div>
+          <div class="list">
+            <div>
+              <h4>Mary Jason</h4>
+              <p>08037588098</p>
+              <p>emelder25@gmail.com</p>
+              <p>Employed 25/03/2009</p>
+            </div>
+            <div class="icons">
+              <span><i class="fa-solid fa-pen-to-square"></i></span>
+              <span><i class="fa-solid fa-trash-can"></i></span>
+            </div>
+          </div>
+          <div class="list">
+            <div>
+              <h4>Adam smith</h4>
+              <p>08037588098</p>
+              <p>emelder25@gmail.com</p>
+              <p>Employed 25/03/2009</p>
+            </div>
+            <div class="icons">
+              <span><i class="fa-solid fa-pen-to-square"></i></span>
+              <span><i class="fa-solid fa-trash-can"></i></span>
+            </div>
+          </div>
+          <div class="list">
+            <div>
+              <h4>Adam smith</h4>
+              <p>08037588098</p>
+              <p>emelder25@gmail.com</p>
+              <p>Employed 25/03/2009</p>
+            </div>
+            <div class="icons">
+              <span><i class="fa-solid fa-pen-to-square"></i></span>
+              <span><i class="fa-solid fa-trash-can"></i></span>
+            </div>
+          </div>
+          <div class="list">
+            <div>
+              <h4>Adam smith</h4>
+              <p>08037588098</p>
+              <p>emelder25@gmail.com</p>
+              <p>Employed 25/03/2009</p>
+            </div>
+            <div class="icons">
+              <span><i class="fa-solid fa-pen-to-square"></i></span>
+              <span><i class="fa-solid fa-trash-can"></i></span>
+            </div>
+          </div>
+          <div class="list">
+            <div>
+              <h4>Adam smith</h4>
+              <p>08037588098</p>
+              <p>emelder25@gmail.com</p>
+              <p>Employed 25/03/2009</p>
+            </div>
+            <div class="icons">
+              <span><i class="fa-solid fa-pen-to-square"></i></span>
+              <span><i class="fa-solid fa-trash-can"></i></span>
+            </div>
+          </div>
         </div>
-        <div>
-          <p>edit</p>
-          <p>del</p>
-        </div>
-        <div>
-          <h4>Mary Jason</h4>
-          <p>emelder25@gmail.com</p>
-          <p>08037588098</p>
-          <p>Employed 25/03/2009</p>
-        </div>
-        <div>
-          <p>edit</p>
-          <p>del</p>
-        </div>
-        <div>
-          <h4>Adam smith</h4>
-          <p>emelder25@gmail.com</p>
-          <p>08037588098</p>
-          <p>Employed 25/03/2009</p>
-        </div>
-        <div>
-          <p>edit</p>
-          <p>del</p>
-        </div>
+        <p class="total">Total Number of Employees: 10</p>
       </section>
     </main>
   </body>
