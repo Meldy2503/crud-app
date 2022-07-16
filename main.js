@@ -10,6 +10,8 @@ let msgE = document.querySelector(".errEmail");
 let msgD = document.querySelector(".errDate");
 let employee = document.querySelector(".list-container");
 let closeOnClick = document.querySelector("#closeOnClick");
+// let totalEmployees = document.querySelector(".total");
+// let employeeList = document.querySelector(".list");
 
 // add event listener to form
 form.addEventListener("submit", (e) => {
@@ -34,6 +36,7 @@ let formValidation = () => {
     msgE.innerHTML = "";
     msgD.innerHTML = "";
     acceptData();
+    totalNumOfEmployees();
     // to close to add button on click-> line 38-42
     closeOnClick.setAttribute("data-bs-dismiss", "modal");
     closeOnClick.click();
@@ -79,3 +82,9 @@ let resetForm = () => {
   emailInput.value = "";
   dateInput.value = "";
 };
+
+// let totalNumOfEmployees = () => {
+//   totalEmployees.innerHTML = `
+//   Total Number of Employees: ${employeeList.length}
+//     `;
+// };

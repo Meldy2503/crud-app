@@ -25,9 +25,7 @@ body {
   background-repeat: no-repeat;
   font-family: "Poppins", sans-serif;
   position: relative;
-
 }
-
 
 main {
   width: 70%;
@@ -60,21 +58,24 @@ main::-webkit-scrollbar {
 h1 {
   margin-bottom: 1rem;
   font-size: 3.3rem;
+  font-weight: 900;
   font-family: "Noto Sans", sans-serif;
   color: #d8a31d;
   text-shadow: 0.2rem 0.2rem #cccbcb;
   letter-spacing: 0.2rem;
 }
 
-/* h3 {
+h3 {
   margin-bottom: 1rem;
   font-size: 2.2rem;
-} */
+  font-weight: 700;
+}
 
 h4 {
   font-size: 2.2rem;
   color: #eee;
   margin-bottom: 1rem;
+  font-weight: 900;
 }
 p {
   margin-bottom: 0.4rem;
@@ -125,7 +126,13 @@ input::placeholder {
   box-shadow: 0 0.1rem 0.5rem 0.03rem #333;
   margin-bottom: 1rem;
   border: 2px solid #777;
+  transition: all 0.3s linear;
 }
+
+.list:hover {
+  transform: translateY(-1rem) scale(0.96);
+}
+
 .icons {
   display: flex;
   justify-content: flex-end;
@@ -136,9 +143,17 @@ input::placeholder {
   font-size: 2rem;
   cursor: pointer;
   color: #d8a31d;
+  opacity: 0.9;
+  transition: all 0.3s;
+}
+
+.fa-solid:hover {
+  transform: scale(1.3);
+  opacity: 1;
 }
 
 .fa-user-plus {
+  color: #010e29;
   font-size: 3rem;
   position: absolute;
   top: 3.3rem;
@@ -159,7 +174,7 @@ input::placeholder {
 .go-to-top {
   position: fixed;
   bottom: 0.5rem;
-  right: .5rem;
+  right: 0.5rem;
   height: 4rem;
   width: 4rem;
   background-color: rgb(226, 221, 221, 0.8);
@@ -178,15 +193,14 @@ input::placeholder {
 .add {
   background-color: #010e29;
   border: none;
-  padding:1rem 2.5rem;
+  padding: 1rem 2.5rem;
   font-size: 1.5rem;
 }
 .close {
-  background-color:  #c20606;
+  background-color: #c20606;
   border: none;
   padding: 1rem 2rem;
   font-size: 1.4rem;
-  
 }
 .form-control {
   padding: 1.3rem;
@@ -202,7 +216,6 @@ input::placeholder {
   font-size: 2rem;
   color: #010e29;
   font-weight: 500;
-
 }
 
 .errName,
@@ -213,7 +226,6 @@ input::placeholder {
   font-size: 1.4rem;
   text-align: left;
 }
-
 
 @media only screen and (max-width: 1200px) {
   .list {
@@ -235,6 +247,8 @@ input::placeholder {
   main {
     width: 95%;
   }
+}
+
 @media only screen and (max-width: 600px) {
   main {
     padding: 2rem;
@@ -247,22 +261,21 @@ input::placeholder {
     font-size: 2.5rem;
     top: 3.8rem;
   }
+}
 @media only screen and (max-width: 350px) {
-
   main {
     padding: 1rem;
   }
- 
+
   .list {
     padding: 1.5rem;
-   
   }
   .fa-user-plus {
     right: 15rem;
     left: 0;
-    
+    /* display: none; */
   }
   input::placeholder {
-   opacity: 0;
+    opacity: 0;
   }
 }
