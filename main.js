@@ -58,14 +58,12 @@ let acceptData = () => {
 let addEmployee = () => {
   employee.innerHTML += `
   <div class="list">
-  <div>
     <h4>${data.name}</h4>
     <p>${data.phone}</p>
     <p>${data.email}</p>
-    <p>Employed ${data.date}</p>
-  </div>
+    <p>${data.date}</p>
   <div class="icons">
-    <i class="fa-solid fa-pen-to-square"></i>
+    <i onClick="editEmployee(this)"  data-bs-toggle="modal" data-bs-target="#form" class="fa-solid fa-pen-to-square"></i>
     <i onClick="deleteEmployee(this)" class="fa-solid fa-trash-can"></i>
   </div>
 </div>
@@ -84,4 +82,15 @@ let resetForm = () => {
 // to delete employee on click
 let deleteEmployee = (e) => {
   e.parentElement.parentElement.remove();
+};
+
+// to edit employee details on click
+let editEmployee = (e) => {
+  let selectedEmployee = e.parentElement.parentElement;
+  textInput.value = selectedEmployee.children[0].innerHTML;
+  phoneInput.value = selectedEmployee.children[1].innerHTML;
+  emailInput.value = selectedEmployee.children[2].innerHTML;
+  dateInput.value = selectedEmployee.children[3].innerHTML;
+
+  selectedEmployee.remove();
 };
