@@ -97,6 +97,7 @@ p {
   font-size: 1.6rem;
   cursor: pointer;
 }
+
 #employees {
   width: 100%;
   background-color: rgb(226, 221, 221, 0);
@@ -195,17 +196,34 @@ input::placeholder {
   border: none;
   padding: 1rem 2.5rem;
   font-size: 1.5rem;
+  transition: all 0.5s;
+}
+.add:hover {
+  box-shadow: 9rem 0 0 0 #634a0b inset;
 }
 .close {
   background-color: #c20606;
   border: none;
   padding: 1rem 2rem;
   font-size: 1.4rem;
+  transition: all 0.5s;
+}
+.close:hover {
+  box-shadow: 9rem 0 0 0 #520404 inset;
 }
 .form-control {
   padding: 1.3rem;
   font-size: 1.4rem;
   overflow: auto;
+  outline: none;
+}
+
+.form-control:-webkit-autofill,
+.form-control:-webkit-autofill:hover,
+.form-control:-webkit-autofill:focus,
+.form-control:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px #fff inset !important;
+  -webkit-box-shadow: 0 0 0 30px #fff inset !important;
 }
 
 .label {

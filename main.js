@@ -44,6 +44,14 @@ let formValidation = () => {
   }
 };
 
+// to clear error message on input field click
+let clearError = () => {
+  msgName.innerHTML = "";
+  msgNo.innerHTML = "";
+  msgE.innerHTML = "";
+  msgD.innerHTML = "";
+};
+
 // to accept and store data
 let data = [];
 let acceptData = () => {
@@ -63,9 +71,9 @@ let acceptData = () => {
 // add employee and display on screen
 let addEmployee = () => {
   employee.innerHTML = "";
-  data.map((item, i) => {
+  data.map((item, index) => {
     return (employee.innerHTML += `
-    <div class="list" id=${i}>
+    <div class="list" id=${index}>
       <h4>${item.name}</h4>
       <p>${item.phone}</p>
       <p>${item.email}</p>
