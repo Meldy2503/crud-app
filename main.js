@@ -9,9 +9,7 @@ let msgNo = document.querySelector(".errNo");
 let msgE = document.querySelector(".errEmail");
 let msgD = document.querySelector(".errDate");
 let employee = document.querySelector(".list-container");
-let closeOnClick = document.querySelector("#closeOnClick");
-// let totalEmployees = document.querySelector(".total");
-// let employeeList = document.querySelector(".list");
+let clickAway = document.getElementById("clickAway");
 
 // add event listener to form
 form.addEventListener("submit", (e) => {
@@ -36,12 +34,12 @@ let formValidation = () => {
     msgE.innerHTML = "";
     msgD.innerHTML = "";
     acceptData();
-    totalNumOfEmployees();
     // to close to add button on click-> line 38-42
-    closeOnClick.setAttribute("data-bs-dismiss", "modal");
-    closeOnClick.click();
+    clickAway.setAttribute("data-bs-dismiss", "modal");
+    clickAway.click();
+
     (() => {
-      closeOnClick.setAttribute("data-bs-dismiss", "");
+      clickAway.setAttribute("data-bs-dismiss", "");
     })();
   }
 };
@@ -67,8 +65,8 @@ let addEmployee = () => {
     <p>Employed ${data.date}</p>
   </div>
   <div class="icons">
-    <span><i class="fa-solid fa-pen-to-square"></i></span>
-    <span><i class="fa-solid fa-trash-can"></i></span>
+    <i class="fa-solid fa-pen-to-square"></i>
+    <i onClick="deleteEmployee(this)" class="fa-solid fa-trash-can"></i>
   </div>
 </div>
   `;
@@ -83,8 +81,7 @@ let resetForm = () => {
   dateInput.value = "";
 };
 
-// let totalNumOfEmployees = () => {
-//   totalEmployees.innerHTML = `
-//   Total Number of Employees: ${employeeList.length}
-//     `;
-// };
+// to delete employee on click
+let deleteEmployee = (e) => {
+  e.parentElement.parentElement.remove();
+};
