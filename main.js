@@ -45,29 +45,38 @@ let formValidation = () => {
 };
 
 // to accept and store data
-let data = {};
+let data = [];
 let acceptData = () => {
-  data["name"] = textInput.value;
-  data["phone"] = phoneInput.value;
-  data["email"] = emailInput.value;
-  data["date"] = dateInput.value;
+  data.push({
+    name: textInput.value,
+    phone: phoneInput.value,
+    email: emailInput.value,
+    date: dateInput.value,
+  });
+
+  localStorage.setItem("data", JSON.stringify(data));
+  console.log(data);
   addEmployee();
 };
 
 // add employee and display on screen
 let addEmployee = () => {
-  employee.innerHTML += `
-  <div class="list">
-    <h4>${data.name}</h4>
-    <p>${data.phone}</p>
-    <p>${data.email}</p>
-    <p>${data.date}</p>
-  <div class="icons">
-    <i onClick="editEmployee(this)"  data-bs-toggle="modal" data-bs-target="#form" class="fa-solid fa-pen-to-square"></i>
-    <i onClick="deleteEmployee(this)" class="fa-solid fa-trash-can"></i>
+  employee.innerHTML = "";
+  data.map((item, i) => {
+    return (employee.innerHTML += `
+    <div class="list" id=${i}>
+      <h4>${item.name}</h4>
+      <p>${item.phone}</p>
+      <p>${item.email}</p>
+      <p>${item.date}</p>
+    <div class="icons">
+      <i onClick="editEmployee(this)"  data-bs-toggle="modal" data-bs-target="#form" class="fa-solid fa-pen-to-square"></i>
+      <i onClick="deleteEmployee(this)" class="fa-solid fa-trash-can"></i>
+    </div>
   </div>
-</div>
-  `;
+    `);
+  });
+
   resetForm();
 };
 
@@ -94,3 +103,9 @@ let editEmployee = (e) => {
 
   selectedEmployee.remove();
 };
+
+(() => {
+  data = JSON.parse(localStorage.getItem("data"));
+  addEmployee();
+  console.log(data);
+})();
