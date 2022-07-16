@@ -54,6 +54,7 @@ let acceptData = () => {
     date: dateInput.value,
   });
 
+  //  to push data to local storage
   localStorage.setItem("data", JSON.stringify(data));
   console.log(data);
   addEmployee();
@@ -71,7 +72,7 @@ let addEmployee = () => {
       <p>${item.date}</p>
     <div class="icons">
       <i onClick="editEmployee(this)"  data-bs-toggle="modal" data-bs-target="#form" class="fa-solid fa-pen-to-square"></i>
-      <i onClick="deleteEmployee(this)" class="fa-solid fa-trash-can"></i>
+      <i onClick="deleteEmployee(this);addEmployee()" class="fa-solid fa-trash-can"></i>
     </div>
   </div>
     `);
@@ -91,6 +92,8 @@ let resetForm = () => {
 // to delete employee on click
 let deleteEmployee = (e) => {
   e.parentElement.parentElement.remove();
+  data.splice(e.parentElement.parentElement.id, 1);
+  localStorage.setItem("data", JSON.stringify(data));
 };
 
 // to edit employee details on click
@@ -101,11 +104,13 @@ let editEmployee = (e) => {
   emailInput.value = selectedEmployee.children[2].innerHTML;
   dateInput.value = selectedEmployee.children[3].innerHTML;
 
-  selectedEmployee.remove();
+  // selectedEmployee.remove();
+  deleteEmployee(e);
 };
 
+// to retrieve and display data from local storage
 (() => {
-  data = JSON.parse(localStorage.getItem("data"));
+  data = JSON.parse(localStorage.getItem("data")) || [];
   addEmployee();
   console.log(data);
 })();
