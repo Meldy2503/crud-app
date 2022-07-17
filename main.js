@@ -122,5 +122,8 @@ let editEmployee = (e) => {
   console.log(data);
 })();
 
-// total number of employees
-total.innerHTML = `Total Number of Employees: ${data.length}`;
+// to calculate the total number of employees
+let totalEmployees = () => {
+  total.innerHTML = `Total Number of Employees: ${data.length}`;
+};
+setInterval(totalEmployees, 1);
