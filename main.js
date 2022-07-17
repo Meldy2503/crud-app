@@ -1,4 +1,3 @@
-// button click submit
 let form = document.getElementById("form");
 let textInput = document.getElementById("textInput");
 let phoneInput = document.getElementById("phoneInput");
@@ -9,9 +8,10 @@ let msgNo = document.querySelector(".errNo");
 let msgE = document.querySelector(".errEmail");
 let msgD = document.querySelector(".errDate");
 let employee = document.querySelector(".list-container");
+let total = document.querySelector(".total");
 let clickAway = document.getElementById("clickAway");
 
-// add event listener to form
+// add event listener(submit) to form
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   formValidation();
@@ -122,3 +122,6 @@ let editEmployee = (e) => {
   addEmployee();
   console.log(data);
 })();
+
+// total number of employees
+total.innerHTML = `Total Number of Employees: ${data.length}`;
