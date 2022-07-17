@@ -112,7 +112,6 @@ let editEmployee = (e) => {
   emailInput.value = selectedEmployee.children[2].innerHTML;
   dateInput.value = selectedEmployee.children[3].innerHTML;
 
-  // selectedEmployee.remove();
   deleteEmployee(e);
 };
 
